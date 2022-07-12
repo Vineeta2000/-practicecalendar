@@ -1,0 +1,16 @@
+<table>
+	<tr>
+		<th>College</th>
+		<%#= button_to "add college", new_college_path , method: :get %>
+	</tr>
+ <% @user.each do |u|%>
+ <tr>
+ 	<td><%= u.username %></td>
+ 	<td><%= u.enrollment %></td>
+ 	<% if current_user.has_role? :superadmin %>
+		
+	<% end %>
+ </tr>		
+<% end %>
+</table>
+

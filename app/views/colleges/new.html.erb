@@ -1,0 +1,15 @@
+<h1>Superadmin power.</h1>
+<%= form_with model: @college ,url:  colleges_path(college_id: @college.id) ,method: :post do |a| %>
+	
+<div class="field">
+	<p><%= a.label :collegename %>
+	<%= a.text_field :collegename %></p>
+
+	<p><%= a.label :Collegecode %>
+	<%= a.text_field :collegecode %></p>
+</div>
+
+<div class="actions">
+      <%= submit_tag"create college"%>
+</div>
+<% end %>

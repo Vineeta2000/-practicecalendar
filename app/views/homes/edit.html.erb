@@ -1,0 +1,34 @@
+<%= form_with model: @user, url:  home_path(user_id: @user.id), method: :put do |a| %>
+<p>
+		<%= a.label :username %>
+		<%= a.text_field :username %>
+		<br>
+		<%= a.label :email %>
+		<%= a.email_field :email %>
+		<br>
+		<%= a.label :enrollment %>
+		<%= a.text_field :enrollment %>
+		<br>
+		<%= a.label :course %>
+		<%= a.text_field :course %>
+		<br>
+		<%= a.label :branch %>
+		<%= a.text_field :branch %>
+		<br>
+		<%= a.label :year %>
+		<%= a.text_field :year %>
+		<br>
+		<%= a.label :collegename %>
+		<%= a.text_field :collegename %>
+		<br>
+		<%= a.label :collegecode %>
+		<%= a.text_field :collegecode %>
+	</p>
+
+	<p>
+		<%= a.submit"update" %>
+	</p>
+
+	<%end%>
+<%= link_to "back" , root_path %>
+

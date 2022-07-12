@@ -1,0 +1,85 @@
+<h2>User Details</h2>
+<table>
+	<tr>
+		<td>Username</td>
+		
+	</tr>
+	
+<% @user.each do |a| %>
+
+	<tr>
+		<td><%= a.username %></td>
+		<!-- <td><%#= form_with(model: @event, local: true) do |form| %>
+			 <div class="field">
+			    <%#= form.label :title %>
+			    <%#= form.text_field :title %>
+			  </div>
+			  <div>
+			    <%#= form.hidden_field :user_id, value: a.id %>
+			  </div>
+			  <div class="field">
+			    <%#= form.label :description %>
+			    <%#= form.text_area :description %>
+			  </div>
+
+			  <div class="field">
+			    <%#= form.label :start_date %>
+			    <%#= form.datetime_select :start_date %>
+			  </div>
+
+			  <div class="field">
+			    <%#= form.label :end_date %>
+			    <%#= form.datetime_select :end_date %>
+			  </div> -->
+
+			 
+			
+
+		</td>
+	</tr>
+
+	<% end %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+     <style>
+        table {
+            width: 400px;
+            border-collapse: collapse; -->
+        } 
+        /*table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 10px;
+        }*/
+    </style>
+</head> 
+<table class = "table">
+	<tr>
+		<td>
+			<%# debugger %>
+			<button type="button" class="fc-day-number" data-toggle="modal fade" data-target="#exampleModalLong">
+			  <div class="table" id="calendar"> </div>
+			  <%# debugger %>
+			   <div id="calendar" id="new_event" role="dialog">
+			  <div class="modal-dialog">
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
+			        <h4 class="modal-title">Create New Event</h4>
+
+			      </div>
+			      <div class="modal-body">
+			      	<%# debugger %>
+			        <%= render 'events/form', event: @event %>
+			      </div>
+			    </div>
+			  </div> 
+			</div>
+
+			</button>
+	
+	 </td></tr></table>

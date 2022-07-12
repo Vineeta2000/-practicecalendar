@@ -1,0 +1,18 @@
+<h2>Student Details</h2>
+<table>
+	<tr>
+		<td>Username</td>
+		<td>Branch</td>
+		<td>Course</td>
+	</tr>
+	<% @colleges.each do |a| %>
+	<tr>
+		<td><%= a.username %></td>
+		<td><%= a.branch %></td>
+		<td><%= a.course %></td>
+	</tr>
+	<% end %>
+</table>
+
+
+<%= link_to "back", root_path %>
